@@ -45,21 +45,25 @@
         </div>
     </div>
 
-
-
-    <!-- Menu -->
-    <div class="w3-container persian menu" >
-        <div class="menu-box">
-            <a class="menu-links menu-selected" href="#"> خانه</a>
-            <a class="menu-links" href="./shop/"> فروشگاه</a>
-            <a class="menu-links" href="./blog/"> بلاگ</a>
-            <a class="menu-links" href="./contacts/"> تماس با ما</a>
-            <a class="menu-links" href="./about/">درباره</a>
+    <div class="persian menu menu-links">
+        <div class="w3-bar">
+            <a href="javascript:void(0)" class="w3-button w3-hide-large w3-hide-medium w3-block" id="NavBTN" onclick="toggleShowNav()">&#9776;</a>
+            <a href="./" class="w3-button w3-hide-small"> خانه</a>
+            <a href="./shop/" class="w3-button w3-hide-small"> فروشگاه</a>
+            <a href="./blog/" class="w3-button w3-hide-small"> بلاگ</a>
+            <a href="./contacts/" class="w3-button w3-hide-small"> تماس با ما</a>
+            <a href="./about/" class="w3-button w3-hide-small">درباره ما</a>
         </div>
-        <div class="menu-dir-box w3-hide-small">
-            <a href="#"> خانه</a>
+
+        <div id="Nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+            <a href="./" class="w3-button w3-block"> خانه</a>
+            <a href="./shop/" class="w3-button w3-block"> فروشگاه</a>
+            <a href="./blog/" class="w3-button w3-block"> بلاگ</a>
+            <a href="./contacts/" class="w3-button w3-block"> تماس با ما</a>
+            <a href="./about/" class="w3-button w3-block">درباره ما</a>
         </div>
     </div>
+
 
     <!-- description -->
     <div class="w3-container w3-white persian">
@@ -68,7 +72,7 @@
                 
                     <div class="w3-container w3-panel">
                         <div class="w3-third w3-center">
-                            <img src="./img/shop.jpg" class="w3-image w3-circle" style="width: 100%;max-width: 300px;">
+                            <img class="w3-image w3-circle lozad" data-src="./img/shop.jpg" style="width: 100%;max-width: 300px;">
                         </div>
                         <div class="w3-container w3-twothird">
                             <h2>فروشگاه</h2>
@@ -82,7 +86,7 @@
                 
                     <div class="w3-container w3-panel">
                         <div class="w3-third w3-center">
-                            <img src="./img/git.jpg" class="w3-image w3-circle" style="width: 100%;max-width: 300px;">
+                            <img class="w3-image w3-circle lozad" data-src="./img/git.jpg" style="width: 100%;max-width: 300px;">
                         </div>
                         <div class="w3-container w3-twothird">
                             <h2>Open source</h2>
@@ -99,7 +103,7 @@
                 
                     <div class="w3-container w3-panel">
                         <div class="w3-third w3-center">
-                            <img src="./img/electronics.jpg" class="w3-image w3-circle" style="width: 100%;max-width: 300px;">
+                            <img class="w3-image w3-circle lozad" data-src="./img/electronics.jpg" style="width: 100%;max-width: 300px;">
                         </div>
                         <div class="w3-container w3-twothird">
                             <h2>کتابخانه قطعات Altium</h2>
@@ -117,7 +121,7 @@
                 
                     <div class="w3-container w3-panel">
                         <div class="w3-third w3-center">
-                            <img src="./img/design.jpg" class="w3-image w3-circle" style="width: 100%;max-width: 300px;">
+                            <img class="w3-image w3-circle lozad" data-src="./img/design.jpg" style="width: 100%;max-width: 300px;">
                         </div>
                         <div class="w3-container w3-twothird">
                             <h2>طراحی و ساخت</h2>
@@ -131,7 +135,7 @@
                 
                     <div class="w3-container w3-panel">
                         <div class="w3-third w3-center">
-                            <img src="./img/donate.jpg" class="w3-image w3-circle" style="width: 100%;max-width: 300px;">
+                            <img class="w3-image w3-circle lozad" data-src="./img/donate.jpg" style="width: 100%;max-width: 300px;">
                         </div>
                         <div class="w3-container w3-twothird">
                             <h2>همیاری و همراهی با ما</h2>
@@ -154,7 +158,6 @@ IOElectro جهت ادامه حیات و پیشرفت خود احتیاج به ه
                             </div>
         </div>
     </div>
-
     <!-- Footer -->
     <div class="w3-container w3-center footer persian">
 		<div class="w3-center flink-box">
@@ -167,11 +170,21 @@ IOElectro جهت ادامه حیات و پیشرفت خود احتیاج به ه
 		<p>تمام حقوق مادی و معنوی متعلق است به IOElectro</p>
     </div>
 
-	<!--
-	<div class="footer w3-hide-small" style="padding-left: 20px;padding-bottom: 10px;">
-		 Powered by <a href="https://liyanboy74.github.io/htmixer/">HTMixer</a>
-	</div>
-	-->
-
+	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+	<script>
+		const observer = lozad();
+		observer.observe();
+	</script>
+	<script>
+		function toggleShowNav() {
+			var Nav = document.getElementById("Nav");
+			var NavBTN=document.getElementById("NavBTN");
+			if (Nav.className.indexOf("w3-show") == -1) {
+			Nav.className += " w3-show";
+			} else {
+			Nav.className = Nav.className.replace(" w3-show", "");
+			}
+		}
+	</script>
 </body>
 </html>

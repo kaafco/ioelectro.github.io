@@ -35,22 +35,25 @@
         </div>
     </div>
 
-
-
-    <!-- Menu -->
-    <div class="w3-container persian menu" >
-        <div class="menu-box">
-            <a class="menu-links" href="../"> خانه</a>
-            <a class="menu-links menu-selected" href="#"> فروشگاه</a>
-            <a class="menu-links" href="../blog"> بلاگ</a>
-            <a class="menu-links" href="../contacts/"> تماس با ما</a>
-            <a class="menu-links" href="../about">درباره</a>
+    <div class="persian menu menu-links">
+        <div class="w3-bar">
+            <a href="javascript:void(0)" class="w3-button w3-hide-large w3-hide-medium w3-block" id="NavBTN" onclick="toggleShowNav()">&#9776;</a>
+            <a href="../" class="w3-button w3-hide-small"> خانه</a>
+            <a href="../shop/" class="w3-button w3-hide-small"> فروشگاه</a>
+            <a href="../blog/" class="w3-button w3-hide-small"> بلاگ</a>
+            <a href="../contacts/" class="w3-button w3-hide-small"> تماس با ما</a>
+            <a href="../about/" class="w3-button w3-hide-small">درباره ما</a>
         </div>
-        <div class="menu-dir-box w3-hide-small">
-            <a href="#"> فروشگاه</a> /
-            <a href="../"> خانه</a>
+
+        <div id="Nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+            <a href="../" class="w3-button w3-block"> خانه</a>
+            <a href="../shop/" class="w3-button w3-block"> فروشگاه</a>
+            <a href="../blog/" class="w3-button w3-block"> بلاگ</a>
+            <a href="../contacts/" class="w3-button w3-block"> تماس با ما</a>
+            <a href="../about/" class="w3-button w3-block">درباره ما</a>
         </div>
     </div>
+
 
     <!-- description -->
     <div class="w3-container w3-white persian">
@@ -60,41 +63,38 @@
     </div>
 
     <!-- Main -->
-    <div class="w3-row persian w3-animate-opacity">
+    <div class="persian w3-animate-opacity">
         
             <div class="w3-row">
-                
-                    <div class="w3-half w3-panel" style="float: right;">
-                        <div class="w3-container w3-white w3-card-2 w3-round">
-                            <h2>
-                                تایمر آبیاری
-
-                            </h2>
-                            <hr>
-                            <div class="w3-row ">
-                                <div class="w3-container w3-third w3-center" style="float: right;">
-                                    <div class="w3-hover-opacity">
-                                        <a href="   ../shop/water-pump-timer">
-                                            <img class="w3-image max-width w3-round" src="     ../shop/upload/water-pump-timer/img/medium.jpg">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="w3-container w3-twothird">
-                                    <p class="product-description">
-                                        تایمر آبیاری هوشمند IOE با قابلیت کنترل پمپ و شیر برقی بر اساس برنامه زمانی متناسب با ماه های شمسی و ایام هفته و ساعات روز که میتوان برای سالها در ساعات و دفعات و روزهای مختلف برای هر یک ماه پمپ و شیر برقی را کنترل کند. 
-
-                                    </p>
-                                    <a class="left-button" href="   ../shop/water-pump-timer">
-                                        <button class="w3-button w3-small w3-white w3-border w3-round">    مشاهده اطلاعات کامل</button>
+                <div class="w3-panel">
+                    <div class=" w3-white w3-card-4 w3-round">
+                        <div class="w3-row ">
+                            <div class="w3-quarter" style="float: right;">
+                                <div class="w3-hover-grayscale">
+                                    <a href="   ../shop/water-pump-timer">
+                                        <img class="blog-img lozad" data-src="     ../shop/upload/water-pump-timer/img/medium.jpg">
                                     </a>
                                 </div>
                             </div>
-                            <br>
+                            <div class="w3-container w3-threequarter">
+                                <h3>
+                                    تایمر آبیاری
+
+                                </h3>
+                                <hr>
+                                <p class="blog-description">
+                                    تایمر آبیاری هوشمند IOE با قابلیت کنترل پمپ و شیر برقی بر اساس برنامه زمانی متناسب با ماه های شمسی و ایام هفته و ساعات روز که میتوان برای سالها در ساعات و دفعات و روزهای مختلف برای هر یک ماه پمپ و شیر برقی را کنترل کند. 
+
+                                </p>
+                                <a class="left-button" href="   ../shop/water-pump-timer">
+                                    <button class="w3-button w3-small w3-white w3-border w3-round">    مشاهده اطلاعات کامل</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                            </div>
+                </div>
             </div>
-
+            </div>
     <!-- Footer -->
     <div class="w3-container w3-center footer persian">
 		<div class="w3-center flink-box">
@@ -107,11 +107,21 @@
 		<p>تمام حقوق مادی و معنوی متعلق است به IOElectro</p>
     </div>
 
-	<!--
-	<div class="footer w3-hide-small" style="padding-left: 20px;padding-bottom: 10px;">
-		 Powered by <a href="https://liyanboy74.github.io/htmixer/">HTMixer</a>
-	</div>
-	-->
-
+	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+	<script>
+		const observer = lozad();
+		observer.observe();
+	</script>
+	<script>
+		function toggleShowNav() {
+			var Nav = document.getElementById("Nav");
+			var NavBTN=document.getElementById("NavBTN");
+			if (Nav.className.indexOf("w3-show") == -1) {
+			Nav.className += " w3-show";
+			} else {
+			Nav.className = Nav.className.replace(" w3-show", "");
+			}
+		}
+	</script>
 </body>
 </html>
