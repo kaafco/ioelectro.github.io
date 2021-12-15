@@ -38,7 +38,7 @@
 
     <div class="persian menu menu-links">
         <div class="w3-bar">
-            <a href="javascript:void(0)" class="w3-button w3-hide-large w3-hide-medium w3-block" id="NavBTN" onclick="toggleShowNav()">&#9776;</a>
+            <a href="javascript:void(0)" class="w3-button w3-hide-large w3-hide-medium w3-block" onclick="toggleShowNav()">&#9776;</a>
             <a href="../../" class="w3-button w3-hide-small"> خانه</a>
             <a href="../../shop/" class="w3-button w3-hide-small"> فروشگاه</a>
             <a href="../../blog/" class="w3-button w3-hide-small"> بلاگ</a>
@@ -74,11 +74,15 @@
     <!-- Footer -->
     <div class="w3-container w3-center footer persian">
 		<div class="w3-center flink-box">
-			<a href="https://github.com/ioelectro"><img src="../../img/github.png" class="fimg"></a>
-			<a href="https://www.youtube.com/channel/UCpCUSG_ILFt0p39DzhhV3JA"><img src="../../img/youtube.png" class="fimg"></a>
-			<a href="https://www.aparat.com/ioelectro"><img src="../../img/aparat.png" class="fimg"></a>
-			<a href="https://www.instagram.com/ioelectro"><img src="../../img/inestagram.png" class="fimg"></a>
-		</div>
+			
+				<a href="https://github.com/ioelectro"><img data-src="../../img/github.png" class="fimg lozad"></a>
+			
+				<a href="https://www.youtube.com/channel/UCpCUSG_ILFt0p39DzhhV3JA"><img data-src="../../img/youtube.png" class="fimg lozad"></a>
+			
+				<a href="https://www.aparat.com/ioelectro"><img data-src="../../img/aparat.png" class="fimg lozad"></a>
+			
+				<a href="https://www.instagram.com/ioelectro"><img data-src="../../img/inestagram.png" class="fimg lozad"></a>
+					</div>
 		<hr>
 		<p>تمام حقوق مادی و معنوی متعلق است به IOElectro</p>
     </div>
@@ -91,7 +95,6 @@
 	<script>
 		function toggleShowNav() {
 			var Nav = document.getElementById("Nav");
-			var NavBTN=document.getElementById("NavBTN");
 			if (Nav.className.indexOf("w3-show") == -1) {
 			Nav.className += " w3-show";
 			} else {
