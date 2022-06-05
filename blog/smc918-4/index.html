@@ -1,0 +1,172 @@
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دیکد سیگنال ریموت SMC918-4</title>
+
+    <link rel="icon" type="image/png" href="../../img/icon.png" />
+    <meta name="description" content="برسی و دیکد سیگنال ریموت کنترلر رادیویی که از آیسی SMC918-4 در آن استفاده شده است.">
+
+    <!-- <link rel="stylesheet" href="../../css/w3.css"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="../../css/my.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WR461M9WRC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WR461M9WRC');
+    </script>
+    <!-- End Google Analytics -->
+
+    
+
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Header -->
+    <div class="w3-display-container">
+        <div class="logo">
+            <div class="w3-display-middle w3-container">
+                <span class="logo-span">IOElectro</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="persian menu menu-links">
+        <div class="w3-bar">
+            <a href="javascript:void(0)" class="w3-button w3-hide-large w3-hide-medium w3-block" onclick="toggleShowNav()">&#9776;</a>
+            <a href="../../" class="w3-button w3-hide-small"> خانه</a>
+            <a href="../../shop/" class="w3-button w3-hide-small"> فروشگاه</a>
+            <a href="../../blog/" class="w3-button w3-hide-small"> بلاگ</a>
+            <a href="../../contacts/" class="w3-button w3-hide-small"> تماس با ما</a>
+            <a href="../../about/" class="w3-button w3-hide-small">درباره ما</a>
+            <a href="../../course/" class="w3-button w3-hide-small">دوره های آموزشی</a>
+        </div>
+
+        <div id="Nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+            <a href="../../" class="w3-button w3-block"> خانه</a>
+            <a href="../../shop/" class="w3-button w3-block"> فروشگاه</a>
+            <a href="../../blog/" class="w3-button w3-block"> بلاگ</a>
+            <a href="../../contacts/" class="w3-button w3-block"> تماس با ما</a>
+            <a href="../../about/" class="w3-button w3-block">درباره ما</a>
+            <a href="../../course/" class="w3-button w3-block">دوره های آموزشی</a>
+        </div>
+    </div>
+
+
+    <!-- Main -->
+    <div class="w3-container w3-white persian ">
+        <div class="w3-panel one-page-text w3-animate-opacity">
+            <div class="w3-small w3-left time-text">1401/3/15 <img src="../../img/time_clock_icon.png" class="time-small-icon"></div>
+            <a href="https://github.com/ioelectro/ioelectro.github.io/blob/main/var/blog/smc918-4.txt" class="edit-page-text">[ویرایش]</a>
+            <h1>دیکد سیگنال ریموت SMC918-4</h1>
+            <hr>
+            <p>
+برسی و دیکد سیگنال ریموت کنترلر رادیویی که از آیسی SMC918-4 در آن استفاده شده است.
+</p>
+
+<div class="w3-center">
+<img class="w3-image w3-round" src="../../blog/upload/smc918-4/smc918-4.jpg">
+<p class="img-text">ریموت smc918-4</p>
+</div>
+
+<h4>
+سیگنال
+</h4>
+
+<p>
+آیسی ریموت کنترلر SMC918-4 یک نوع آیسی رمزگذار(انکودر) است که وضعیت کلیدها را میخواند و آنها را برای ارسال توسط فرستنده رادیویی آماده میکند.<br>
+در تصویر زیر یک نمونه از پالس دریافتی از آیسی SMC918-4 قابل مشاهده است.
+</p>
+
+<br>
+
+<div class="w3-center">
+<img class="w3-image w3-round" src="../../blog/upload/smc918-4/code.jpg">
+<p class="img-text">سیگنال smc918-4</p>
+</div>
+
+
+<h4>
+فرضیات
+</h4>
+<p>
+با برسی سیگنال های دریافتی و ثابت بودن هر سیگنال برای هر بار فشرده شدن کلید، میتوان متوجه شد که این آیسی عملکرد مشابه ریموت های کدلرن دارد، ولی در تعداد و نحوه ارسال دیتا، عملکرد متفاوتی از خود نشان میدهد.
+</p>
+
+<p>
+چیزی که برای ریموت های کدلرن جامعیت دارد، تقسیم بندی پکت دیتا به سه بخش است که شامل (قسمت همزمانی) ، (کد خاص فرستنده) و (وضعیت کلیدها) میباشد. {قرمز}
+</p>
+
+<p>
+سیگنال دارای دو الگوی تکرار شونده است، که میتوان هر الگو را با یک مقدار باینری 0 یا 1 معادل گرفت.{زرد}
+</p>
+
+<p>
+با فشردن کلیدهای مختلف میتوان دید که 6 بیت آخر تغیر میکنند و مابقی ثابت هستند، پس اگر کل پالس شامل 29 بیت باشد، میتوان گفت که این آیسی شامل 23 بیت (کد خاص فرستنده) و 6 بیت (وضعیت کلیدها) میباشد.
+</p>
+
+<p>
+متوجه شدم که با فشرده شدن کلیدها، کدها به صورت ذوج هایی از بیت های 1 کنار هم تغیر میکنند!{سبز} <br>
+به عنوان مثال (کد باینری کلیدها): <br>
+ 000011 ، 001111 ، 110000 ، 110011 ، 111100 <br>
+کد کلیدها بیانگر این است که میتوان 8 حالت مختلف برای کلیدها در نظر گرفت.
+</p>
+
+
+<h4>
+دیکد سیگنال
+</h4>
+<p>
+اگر تمام فرضیات صحیح باشند، سیگنال مطابق تصویر زیر دیکد میشود.
+</p>
+
+<div class="w3-center">
+<img class="w3-image w3-round" src="../../blog/upload/smc918-4/code-f.jpg">
+<p class="img-text">دیکد سیگنال smc918-4</p>
+</div>
+
+<p>
+مقدار T به احتمال زیاد متناسب با مقاومت تنظیم کننده کلاک آیسی است که برای ریموت بالا مقدار 300 میکرو ثانیه اندازه گیری شد.
+</p>
+
+
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="w3-container w3-center footer persian">
+		<div class="w3-center flink-box">
+			
+				<a href="https://github.com/ioelectro"><img data-src="../../img/github.png" class="fimg lozad"></a>
+			
+				<a href="https://www.youtube.com/channel/UCpCUSG_ILFt0p39DzhhV3JA"><img data-src="../../img/youtube.png" class="fimg lozad"></a>
+			
+				<a href="https://www.aparat.com/ioelectro"><img data-src="../../img/aparat.png" class="fimg lozad"></a>
+			
+				<a href="https://www.instagram.com/ioelectro"><img data-src="../../img/inestagram.png" class="fimg lozad"></a>
+					</div>
+		<hr>
+		<p>تمام حقوق مادی و معنوی متعلق است به IOElectro</p>
+    </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+	<script>
+		const observer = lozad();
+		observer.observe();
+	</script>
+	<script>
+		function toggleShowNav() {
+			var Nav = document.getElementById("Nav");
+			if (Nav.className.indexOf("w3-show") == -1) {
+			Nav.className += " w3-show";
+			} else {
+			Nav.className = Nav.className.replace(" w3-show", "");
+			}
+		}
+	</script>
+</body>
+</html>
