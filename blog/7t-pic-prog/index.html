@@ -1,0 +1,168 @@
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساخت پروگرامر PIC با 7 ترانزیستور</title>
+
+    <link rel="icon" type="image/png" href="../../img/icon.png" />
+    <meta name="description" content="ساخت یک پروگرامر ساده و ارزان برای پروگرام میکروکنترل های سری PIC با استفاده از 7 ترانزیستور و درگاه موازی (پرینتری).">
+
+    <!-- <link rel="stylesheet" href="../../css/w3.css"> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="../../css/my.css">
+
+
+
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Header -->
+    <div class="w3-display-container">
+        <div class="logo">
+            <div class="w3-display-middle w3-container">
+                <span class="logo-span">IOElectro</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="persian menu menu-links">
+        <div class="w3-bar">
+            <a href="javascript:void(0)" class="w3-button w3-hide-large w3-hide-medium w3-block" onclick="toggleShowNav()">&#9776;</a>
+            <a href="../../" class="w3-button w3-hide-small"> خانه</a>
+            <a href="../../shop/" class="w3-button w3-hide-small"> فروشگاه</a>
+            <a href="../../blog/" class="w3-button w3-hide-small"> بلاگ</a>
+            <a href="../../contacts/" class="w3-button w3-hide-small"> تماس با ما</a>
+            <a href="../../about/" class="w3-button w3-hide-small">درباره ما</a>
+            <a href="../../course/" class="w3-button w3-hide-small">دوره های آموزشی</a>
+        </div>
+
+        <div id="Nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+            <a href="../../" class="w3-button w3-block"> خانه</a>
+            <a href="../../shop/" class="w3-button w3-block"> فروشگاه</a>
+            <a href="../../blog/" class="w3-button w3-block"> بلاگ</a>
+            <a href="../../contacts/" class="w3-button w3-block"> تماس با ما</a>
+            <a href="../../about/" class="w3-button w3-block">درباره ما</a>
+            <a href="../../course/" class="w3-button w3-block">دوره های آموزشی</a>
+        </div>
+    </div>
+
+
+    <!-- Main -->
+    <div class="w3-container w3-white persian ">
+        <div class="w3-panel one-page-text w3-animate-opacity">
+            <div class="w3-small w3-left time-text">1401/4/22 <img src="../../img/time_clock_icon.png" class="time-small-icon"></div>
+            <a href="https://github.com/ioelectro/ioelectro.github.io/blob/main/var/blog/7t-pic-prog.txt" class="edit-page-text">[ویرایش]</a>
+            <h1>ساخت پروگرامر PIC با 7 ترانزیستور</h1>
+            <hr>
+            <p>
+ساخت یک پروگرامر ساده و ارزان برای پروگرام میکروکنترل های سری PIC با استفاده از 7 ترانزیستور و درگاه موازی (پرینتری).
+</p>
+
+<div class="w3-center">
+<img class="w3-image w3-round" src="../../blog/upload/7t-pic-prog/7-transistor-pic-programmer.jpg">
+<p class="img-text">پروگرامر</p>
+</div>
+
+<p>
+این پروگرامر در واقع بر مبنای پروگرامر 
+<a href="http://picpgm.picprojects.net/hardware.html#TAIT_PROGRAMMER" class="link">Tait Classic PIC Programmer - (c) David Tait</a> 
+ساخته شده است و تنها تفاوتی که در قسمت اتصال به رایانه دارد، در معکوس بودن پالس های سوکت
+<a href="https://en.wikipedia.org/wiki/Parallel_port" class="link">درگاه موازی</a>
+است که به سادگی در قسمت نرم افزار امکان این تغیر فراهم شده است.
+</p>
+
+<div class="w3-center">
+<img class="w3-image w3-round" src="../../blog/upload/7t-pic-prog/7-transistor-pic-programmer-schematic.jpg">
+<p class="img-text">شماتیک</p>
+</div>
+
+<p>
+از نرم افزار ساده و رایگان
+<a href="http://picpgm.picprojects.net/" class="link">PICPgm</a>
+برای اتصال به پروگرامر استفاده شده است که برای تمامی سیستم عامل ها از
+<a href="http://picpgm.picprojects.net/download.html" class="link">اینجا</a>
+قابل دریافت است.
+</p>
+
+<p>
+این پروگرامر قابلیت پروگرام تمام میکروهایی که در 
+<a href="http://picpgm.picprojects.net/devices.html" class="link">این</a>
+لیست به عنوان
+High-Voltage
+شناخته میشوند را دارا میباشد. 
+<br>
+ البته با کمی تغیر در قسمت ولتاژ ورودی میتواند برای سری
+Low-Voltage
+هم مورد استفاده قرار بگیرد. (تست نشده است!)
+</p>
+
+<p>
+در قسمت تنظیمات پروگرامر مطابق تصویر زیر در قسمت
+Pin Configuration
+چک باکس های
+Invert
+را تغیر دهید.
+<br>
+برای تست مدار میتوانید از قسمت
+Hardware Test
+استفاده کنید.
+<br>
+اگر در عملیات پروگرام با خطا مواجه شدید، سرعت پروگرام را با استفاده از قسمت
+Timing Delay Factor
+پله پله کم کنید و دوباره امتحان کنید.
+</p>
+
+<div class="w3-center">
+<img class="w3-image w3-round" src="../../blog/upload/7t-pic-prog/config.jpg">
+<p class="img-text">تنظیمات</p>
+</div>
+
+<p>هشدار: هرگونه اتصال تغذیه و اعمال ولتاژ بیش از 5 ولت و یا جریان بیش از 100 میلی آمپر به درگاه موازی رایانه موجب آسیب دیدن رایانه میشود!</p>
+
+<p><a href="../../blog/upload/7t-pic-prog/7-transistor-pic-programmer.pdf" class="link">
+دریافت شماتیک به صورت فایل PDF
+</a></p>
+
+<p class="en">
+Reference:<br>
+<a href="https://www.instructables.com/5-transistor-PIC-programmer-*Schematic-added-to-st/" class="link">5 Transistor PIC Programmer</a><br>
+<a href="http://picpgm.picprojects.net/hardware.html#TAIT_PROGRAMMER" class="link">Tait Classic PIC Programmer - (c) David Tait</a>
+</p>
+
+
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="w3-container w3-center footer persian">
+		<div class="w3-center flink-box">
+			
+				<a href="https://github.com/ioelectro"><img data-src="../../img/github.png" class="fimg lozad"></a>
+			
+				<a href="https://www.youtube.com/channel/UCpCUSG_ILFt0p39DzhhV3JA"><img data-src="../../img/youtube.png" class="fimg lozad"></a>
+			
+				<a href="https://www.aparat.com/ioelectro"><img data-src="../../img/aparat.png" class="fimg lozad"></a>
+			
+				<a href="https://www.instagram.com/ioelectro"><img data-src="../../img/inestagram.png" class="fimg lozad"></a>
+					</div>
+		<hr>
+		<p>تمام حقوق مادی و معنوی متعلق است به IOElectro</p>
+    </div>
+
+	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+	<script>
+		const observer = lozad();
+		observer.observe();
+	</script>
+	<script>
+		function toggleShowNav() {
+			var Nav = document.getElementById("Nav");
+			if (Nav.className.indexOf("w3-show") == -1) {
+			Nav.className += " w3-show";
+			} else {
+			Nav.className = Nav.className.replace(" w3-show", "");
+			}
+		}
+	</script>
+</body>
+</html>
