@@ -16,10 +16,16 @@
 		<loc>https://ioelectro.ir/course/learn-c/</loc>
 	</url>
 	<url>
+		<loc>https://ioelectro.ir/course/upload/</loc>
+	</url>
+	<url>
 		<loc>https://ioelectro.ir/shop/</loc>
 	</url>
 	<url>
 		<loc>https://ioelectro.ir/shop/h01/</loc>
+	</url>
+	<url>
+		<loc>https://ioelectro.ir/shop/upload/</loc>
 	</url>
 	<url>
 		<loc>https://ioelectro.ir/shop/water-pump-timer/</loc>
@@ -62,5 +68,8 @@
 	</url>
 	<url>
 		<loc>https://ioelectro.ir/blog/st-vscode/</loc>
+	</url>
+	<url>
+		<loc>https://ioelectro.ir/blog/upload/</loc>
 	</url>
 </urlset>
