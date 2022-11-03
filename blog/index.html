@@ -3,12 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> بلاگ</title>
-
     <link rel="icon" type="image/png" href="../img/icon.png" />
     <meta name="description" content="بلاگ">
-    <link rel="stylesheet" href="../css/w3.css">
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  -->
+    <link rel="stylesheet" href="../css/w3.css">
     <link rel="stylesheet" href="../css/my.css">
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WR461M9WRC"></script>
@@ -39,18 +39,18 @@
             <a href="../" class="w3-button w3-hide-small"> خانه</a>
             <a href="../shop/" class="w3-button w3-hide-small"> فروشگاه</a>
             <a href="../blog/" class="w3-button w3-hide-small"> بلاگ</a>
+            <a href="../course/" class="w3-button w3-hide-small">دوره های آموزشی</a>
             <a href="../contacts/" class="w3-button w3-hide-small"> تماس با ما</a>
             <a href="../about/" class="w3-button w3-hide-small">درباره ما</a>
-            <a href="../course/" class="w3-button w3-hide-small">دوره های آموزشی</a>
         </div>
 
         <div id="Nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
             <a href="../" class="w3-button w3-block"> خانه</a>
             <a href="../shop/" class="w3-button w3-block"> فروشگاه</a>
             <a href="../blog/" class="w3-button w3-block"> بلاگ</a>
+            <a href="../course/" class="w3-button w3-block">دوره های آموزشی</a>
             <a href="../contacts/" class="w3-button w3-block"> تماس با ما</a>
             <a href="../about/" class="w3-button w3-block">درباره ما</a>
-            <a href="../course/" class="w3-button w3-block">دوره های آموزشی</a>
         </div>
     </div>
 
@@ -564,20 +564,15 @@
 		<p>تمام حقوق مادی و معنوی متعلق است به IOElectro</p>
     </div>
 
-	<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> -->
+	<script src="../js/lozad.min.js"></script>
 	<script>
 		const observer = lozad();
 		observer.observe();
 	</script>
-	<script>
-		function toggleShowNav() {
-			var Nav = document.getElementById("Nav");
-			if (Nav.className.indexOf("w3-show") == -1) {
-			Nav.className += " w3-show";
-			} else {
-			Nav.className = Nav.className.replace(" w3-show", "");
-			}
-		}
-	</script>
+
+	<!-- my custom script -->
+	<script src="../js/my.js"></script>
+
 </body>
 </html>
